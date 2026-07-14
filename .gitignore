@@ -1,0 +1,35 @@
+# Python 缓存文件
+__pycache__/
+*.py[cod]
+*.pyo
+
+# 虚拟环境
+venv/
+env/
+.venv/
+
+# 包管理工具
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE 配置
+.vscode/
+.idea/
+*.iml
+
+# 日志和临时文件
+*.log
+*.tmp
+
+# 敏感配置
+.env
+config.local.py
+
+# Jupyter Notebook 临时文件
+.ipynb_checkpoints/
+
+# 数据文件（如果项目里有大文件）
+*.db
+*.sqlite
+data/
