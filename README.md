@@ -1,7 +1,17 @@
+# 11_RAG_Domain_Knowledge_QA
+
+### 项目简介
+本项目使用 Qwen3-4B-Instruct 模型作为生成器，结合向量数据库进行知识检索，实现领域知识问答功能。
+
+### 主要功能
+- 文档解析与向量化
+- 基于语义的检索
+- 大模型生成回答
+
 ### 注：
 1. 我电脑是11代i5+3050笔记本，显存只有4g，而一个qwen3-b模型就2g起步。所以我采取了“按需加载与释放” 策略，导致rag运行有点慢。
 2. 我为了方便，是用Qwen3-4B-Instruct + JSON Prompt来给“问题与数据库的相关性”打分的，没用reranker模型。
-3. 这是个人项目
+3. 这是个人项目。 之所以是 数字11 开头，是因为这是我的第11个项目
 4. 账号：admin  密码：123456
 ---
 
@@ -12,7 +22,7 @@
 4. 在 Models 文件夹内打开 cmd ，输入创建模型的命令：
 ```ollama create qwen3-4b -f Modelfile.qwen```
 ```ollama create bge-large-zh -f Modelfile.bge_large```
-5. 创建新虚拟环境，在虚拟环境中批量安装 requirements.txt 的所有依赖包，指令为：  ```pip install -r requirements.txt```
+5. 创建新虚拟环境 python 3.11+ ，在虚拟环境中批量安装 requirements.txt 的所有依赖包，指令为：  ```pip install -r requirements.txt```
 6. 启动后端```python ./server/app.py```（建议在编辑器上启动）
 7. 启动前端 ```streamlit run ./client/app.py```（或双击start.bat）
 8. 最后在浏览器上打开```http://localhost:8501```
